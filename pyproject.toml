@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "telegram-calendar"
+version = "0.1.0"
+description = ""
+authors = ["Zhu Weiji <zhuweiji1997@gmail.com>"]
+readme = "README.md"
+packages = [{include = "telegram_calendar"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^20.2"
+icalendar = "^5.0.5"
+dateparser = "^1.1.8"
+jurigged = "^0.5.5"
+parsedatetime = "^2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start               = "scripts:start"
+test                = "scripts:test"
+tests               = "scripts:test"
+healthcheck         = "scripts:healthcheck"
+add_precommit_hooks = "scripts:add_pre_commit_hooks"
